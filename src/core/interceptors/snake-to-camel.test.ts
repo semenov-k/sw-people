@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 import { AxiosResponse } from 'axios';
 import { snakeToCamelInterceptor } from './snake-to-camel';
 

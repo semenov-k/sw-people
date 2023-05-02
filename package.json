@@ -29,7 +29,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "c": "git-cz",
-    "postinstall": "husky install"
+    "postinstall": "husky install",
+    "lint": "eslint ./src"
   },
   "eslintConfig": {
     "extends": [
@@ -41,8 +42,67 @@
       "prettier"
     ],
     "rules": {
-      "prettier/prettier": "error"
-    }
+      "prettier/prettier": "error",
+      "@typescript-eslint/naming-convention": [
+        "error",
+        {
+          "selector": "default",
+          "format": [
+            "PascalCase",
+            "camelCase"
+          ],
+          "leadingUnderscore": "forbid",
+          "trailingUnderscore": "forbid"
+        },
+        {
+          "selector": [
+            "variable",
+            "property"
+          ],
+          "format": [
+            "PascalCase",
+            "camelCase",
+            "UPPER_CASE"
+          ],
+          "leadingUnderscore": "forbid",
+          "trailingUnderscore": "forbid"
+        },
+        {
+          "selector": [
+            "default",
+            "variable",
+            "property"
+          ],
+          "format": null,
+          "leadingUnderscore": "allow",
+          "filter": "^_$"
+        },
+        {
+          "selector": "typeLike",
+          "format": [
+            "PascalCase"
+          ]
+        },
+        {
+          "selector": [
+            "enumMember",
+            "enum"
+          ],
+          "format": [
+            "camelCase",
+            "UPPER_CASE",
+            "snake_case",
+            "PascalCase"
+          ]
+        },
+        {
+          "selector": "property",
+          "format": null,
+          "filter": "^__html$"
+        }
+      ]
+    },
+    "root": true
   },
   "browserslist": {
     "production": [
