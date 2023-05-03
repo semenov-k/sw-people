@@ -2,6 +2,7 @@
   "name": "faraway-starwars",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://semenov-k.github.io/sw-people",
   "dependencies": {
     "@chakra-ui/icons": "^2.0.19",
     "@chakra-ui/react": "^2.6.0",
@@ -40,7 +41,9 @@
     "postinstall": "husky install",
     "lint": "eslint ./src",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "jest": {
     "transformIgnorePatterns": [
@@ -157,6 +160,7 @@
     "babel-plugin-named-exports-order": "^0.0.2",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "gh-pages": "^5.0.0",
     "git-cz": "^4.9.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.2",

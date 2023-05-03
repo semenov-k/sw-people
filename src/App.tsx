@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 import { store } from './redux';
 import { PeopleDetailPage, PeopleListPage } from './features/people';
 import { Page404 } from './features/shared';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 
 const App = () => {
   return (
