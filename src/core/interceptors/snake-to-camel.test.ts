@@ -9,7 +9,7 @@ const responseFactory = (data: object, isJSON: boolean) => {
   } as AxiosResponse;
 
   if (isJSON) {
-    response.headers['Content-Type'] = 'application/json';
+    response.headers['content-type'] = 'application/json';
   }
 
   return response;
